@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Workout Tracker</h1>
+        
+        <div class="timer-container">
+            <button class="timer-button" id="decrease-timer">-</button>
+            <div id="timer-display">2:00</div>
+            <button class="timer-button" id="increase-timer">+</button>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" data-view="add">Add Workout</button>
+            <button class="tab" data-view="history">History</button>
+            <button class="tab" data-view="stats">Stats</button>
+        </div>
+        
+        <div id="add-view" class="view-content">
+            <h2>Add New Workout</h2>
+            <form id="workout-form">
+                <div id="form-fields"></div>
+                <button type="submit">Save Workout</button>
+            </form>
+        </div>
+        
+        <div id="history-view" class="view-content hidden">
+            <h2>Workout History</h2>
+            <div id="workout-history"></div>
+        </div>
+        
+        <div id="stats-view" class="view-content hidden">
+            <h2>Workout Statistics</h2>
+            <div id="workout-stats"></div>
+            <div class="data-controls">
+                <button type="button" id="export-data" class="data-button">Export Data</button>
+                <button type="button" id="import-label" class="data-button">Import Data</button>
+                <input type="file" id="import-file" accept=".json" style="display: none;">
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
